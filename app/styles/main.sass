@@ -1,12 +1,39 @@
-@import 'rosetta'
-@import 'less'
+@import "rosetta"
+@import "less"
+@import "compass/css3"
 
 body
   // Color picked up from Rosetta
   background: $colors-backgroundColor
 
+  & > .container
+    padding-top: 4%
+
 h1
   // Color picked up from Rosetta
-  background-color: $colorScheme-fourth
   font-style: italic
-  border-radius: 200% 0% 200% 0%
+  color: $colorScheme-third
+
+
+ul
+  position: relative
+  li
+    list-style: none
+    &:before
+      background-color: $colorScheme-fourth
+      border-radius: 200% 0% 200% 0%
+      display: block
+      width: 0.5em
+      height: 1em
+      content: ''
+      position: absolute
+      left: 1.5em
+
+button
+  &.btn-default
+    position: absolute
+    right: -8%
+    @include rotate(-30deg)
+    bottom: 13%
+    padding: 8px 10em 8px 10em
+
