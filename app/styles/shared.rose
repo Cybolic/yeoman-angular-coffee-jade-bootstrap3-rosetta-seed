@@ -1,0 +1,26 @@
+colorScheme:
+  $background = lightGrey
+  $first  = #42ffa4
+  $second = #4542ff
+  $third  = #ff429e
+  $fourth = #fcff42
+
+colors:
+  $backgroundColor = colorScheme.$background
+
+
+btn:
+  default:
+    $color = white
+    $bg    = colorScheme.$second
+
+// To set Bootstrap colours, you can override any variable
+// defined in components/bootstrap/less/variables.less,
+// in slightly different syntax.
+// e.g. $btn-default-color: #7af;
+//      $btn-default-bg:    black;
+// would be written as:
+// btn:
+//   default:
+//     $color = #7af
+//     $bg    = black
