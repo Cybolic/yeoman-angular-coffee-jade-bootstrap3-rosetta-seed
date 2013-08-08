@@ -121,7 +121,7 @@ module.exports = (grunt) ->
       unitwatch:
         autoWatch: true
         singleRun: false
-      jenkins:
+      junit:
         singleRun: true  # already defined in karma.conf.js, but since this target is likely to be used in a script, let's make sure.
         reporters: ["dots", "junit"]
         junitReporter:
@@ -346,9 +346,9 @@ module.exports = (grunt) ->
 
 
   # Testing
-  grunt.registerTask "test"        , ["clean:server", "build:server", "connect:test", "karma:unit"]
-  grunt.registerTask "test:watch"  , ["clean:server", "build:server", "connect:test", "karma:unit"]
-  grunt.registerTask "test:jenkins", ["clean:server", "build:server", "connect:test", "karma:unit"]
+  grunt.registerTask "test"      , ["clean:server", "build:server", "connect:test", "karma:unit"]
+  grunt.registerTask "test:watch", ["clean:server", "build:server", "connect:test", "karma:unitwatch"]
+  grunt.registerTask "test:junit", ["clean:server", "build:server", "connect:test", "karma:junit"]
 
   grunt.registerTask "test:e2e"    , ["clean:server", "build:server", "init-livereload", "karma:e2e"]
 
