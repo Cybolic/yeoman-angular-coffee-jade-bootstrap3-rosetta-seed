@@ -27,7 +27,7 @@
     "grunt-ngmin": "~0.0.2",
     "grunt-contrib-less": "~0.6.4",
     "grunt-contrib-jade": "~0.8.0",
-    "rosetta": "~0.1.1"
+    "rosetta": "git://github.com/Cybolic/rosetta.git#master"
   },
   "engines": {
     "node": ">=0.8.0"
